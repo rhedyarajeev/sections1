@@ -72,6 +72,8 @@ flutter:
       - assets/images/image24.png
       - assets/images/image25.gif
       - assets/images/image26.gif
+      - assets/images/logo.png
+      - assets/images/Rectangle 58.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
