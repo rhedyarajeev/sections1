@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-
+import 'package:sections1/dupe.dart';
 
 import 'package:sections1/opening_filters.dart';
+
+
 
 
 void main() {

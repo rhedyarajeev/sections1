@@ -63,7 +63,7 @@ flutter:
       - assets/images/Arrow back (1).png
       - assets/images/image9.png
       - assets/images/data_exploration.png
-      - assets/images/Search (2).png
+      - assets/images/Search (3).png
       - assets/images/Frame 37418 (1).png
       - assets/images/notification_add.png
       - assets/images/image21.png
@@ -72,8 +72,13 @@ flutter:
       - assets/images/image24.png
       - assets/images/image25.gif
       - assets/images/image26.gif
-      - assets/images/logo.png
-      - assets/images/Rectangle 58.png
+      - assets/images/logoo.png  
+      - assets/images/Rectangle 56.png
+      - assets/images/Rectangle 57 (1).png
+      - assets/images/Rectangle 57 (3).png
+      - assets/images/Rectangle 57.png
+      - assets/images/Rectangle 58 (1).png
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
