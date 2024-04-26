@@ -1336,7 +1336,7 @@ class Training extends StatelessWidget {
                   ),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
