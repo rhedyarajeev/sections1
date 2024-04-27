@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sections1/Training_detailed.dart';
+import 'package:sections1/Trainings.dart';
 import 'package:sections1/assessment_detailed_view.dart';
-import 'package:sections1/dupe.dart';
+
 
 import 'package:sections1/opening_filters.dart';
 
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:Assessments()
+      home:Training()
     );
   }
 }
