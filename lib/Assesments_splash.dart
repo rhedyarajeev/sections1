@@ -68,25 +68,30 @@ class Splash extends StatelessWidget {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => const Assessment()));
                     },
-              child: Container(
-                width: 350,
-                height: 50,
-                decoration: ShapeDecoration(
-                  color: Color(0xFF414ECA),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15),
+              child: GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => Assessment()));
+            },
+                child: Container(
+                  width: 350,
+                  height: 50,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFF414ECA),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
                   ),
-                ),
-                child: Center(
-                  child: Text(
-                    'GET STARTED',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontFamily: 'Nunito',
-                      fontWeight: FontWeight.w700,
-                      height: 0,
+                  child: Center(
+                    child: Text(
+                      'GET STARTED',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                        fontFamily: 'Nunito',
+                        fontWeight: FontWeight.w700,
+                        height: 0,
+                      ),
                     ),
                   ),
                 ),

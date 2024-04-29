@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sections1/assessment_detailed_view.dart';
+import 'package:sections1/leaders_boards.dart';
 
 class Assessment extends StatelessWidget {
   const Assessment({Key? key}) : super(key: key);
@@ -35,13 +37,18 @@ class Assessment extends StatelessWidget {
                       ),
                     ),
                     Spacer(),
-                    Container(
-                      width: 22,
-                      height: 22,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage("assets/images/data_exploration.png"),
-                          fit: BoxFit.fill,
+                     GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => Leader()));
+            },
+                      child: Container(
+                        width: 22,
+                        height: 22,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage("assets/images/data_exploration.png"),
+                            fit: BoxFit.fill,
+                          ),
                         ),
                       ),
                     ),
@@ -269,43 +276,63 @@ class Assessment extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 20),
-                      Container(
-                        width: double.infinity,
-                        height: 45,
-                        decoration: BoxDecoration(
-                          color: Color(0xFF414ECA),
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            'Attempt Now',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontFamily: 'Nunito',
-                              fontWeight: FontWeight.w700,
+                      GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => Assessments()));
+            },
+                        child: Container(
+                          width: double.infinity,
+                          height: 45,
+                          decoration: BoxDecoration(
+                            color: Color(0xFF414ECA),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: TextButton(
+                            onPressed: () {},
+                            child:  GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => Assessments()));
+            },
+                              child: Text(
+                                'Attempt Now',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                  fontFamily: 'Nunito',
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
                             ),
                           ),
                         ),
                       ),
                       SizedBox(height: 8),
-                      Container(
-                        width: double.infinity,
-                        height: 45,
-                        decoration: BoxDecoration(
-                          color: Color(0xFF077AD7),
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            'Check Pre-Requirement',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontFamily: 'Nunito',
-                              fontWeight: FontWeight.w700,
+                      GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => Assessments()));
+            },
+                        child: Container(
+                          width: double.infinity,
+                          height: 45,
+                          decoration: BoxDecoration(
+                            color: Color(0xFF077AD7),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: TextButton(
+                            onPressed: () {},
+                            child:  GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => Assessments()));
+            },
+                              child: Text(
+                                'Check Pre-Requirement',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                  fontFamily: 'Nunito',
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
                             ),
                           ),
                         ),

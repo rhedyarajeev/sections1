@@ -186,57 +186,63 @@ class Training extends StatelessWidget {
                             SizedBox(width: 10),
                             Padding(
                               padding: const EdgeInsets.only(top: 20, left: 10),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Python Basics',
-                                    style: TextStyle(
-                                      color: Color(0xFF260446),
-                                      fontSize: 15,
-                                      fontFamily: 'Nunito',
-                                      fontWeight: FontWeight.w700,
-                                      height: 0,
+                              child: GestureDetector(
+                    onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const TrainingDetailed()));
+                    },
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Python Basics',
+                                      style: TextStyle(
+                                        color: Color(0xFF260446),
+                                        fontSize: 15,
+                                        fontFamily: 'Nunito',
+                                        fontWeight: FontWeight.w700,
+                                        height: 0,
+                                      ),
                                     ),
-                                  ),
-                                  SizedBox(height: 2),
-                                  Text.rich(
-                                    TextSpan(
-                                      children: [
-                                        TextSpan(
-                                          text: 'ShareInfo',
-                                          style: TextStyle(
-                                            color: Color(0xFFEE5602),
-                                            fontSize: 12.50,
-                                            fontFamily: 'Nunito',
-                                            fontWeight: FontWeight.w700,
-                                            height: 0,
+                                    SizedBox(height: 2),
+                                    Text.rich(
+                                      TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: 'ShareInfo',
+                                            style: TextStyle(
+                                              color: Color(0xFFEE5602),
+                                              fontSize: 12.50,
+                                              fontFamily: 'Nunito',
+                                              fontWeight: FontWeight.w700,
+                                              height: 0,
+                                            ),
                                           ),
-                                        ),
-                                        TextSpan(
-                                          text: ' for ',
-                                          style: TextStyle(
-                                            color: Color(0xFF8B8B8B),
-                                            fontSize: 12.50,
-                                            fontFamily: 'Nunito',
-                                            fontWeight: FontWeight.w700,
-                                            height: 0,
+                                          TextSpan(
+                                            text: ' for ',
+                                            style: TextStyle(
+                                              color: Color(0xFF8B8B8B),
+                                              fontSize: 12.50,
+                                              fontFamily: 'Nunito',
+                                              fontWeight: FontWeight.w700,
+                                              height: 0,
+                                            ),
                                           ),
-                                        ),
-                                        TextSpan(
-                                          text: 'CE Thalassery',
-                                          style: TextStyle(
-                                            color: Color(0xFF077AD7),
-                                            fontSize: 12.50,
-                                            fontFamily: 'Nunito',
-                                            fontWeight: FontWeight.w700,
-                                            height: 0,
+                                          TextSpan(
+                                            text: 'CE Thalassery',
+                                            style: TextStyle(
+                                              color: Color(0xFF077AD7),
+                                              fontSize: 12.50,
+                                              fontFamily: 'Nunito',
+                                              fontWeight: FontWeight.w700,
+                                              height: 0,
+                                            ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                           ],

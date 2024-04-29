@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sections1/Assesments_splash.dart';
 
 class Assessments extends StatelessWidget {
   const Assessments({Key? key}) : super(key: key);
@@ -77,24 +78,29 @@ class Assessments extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10), // Adding some space between the text and the button
-            Container(
-              width: 303,
-              height: 44,
-              decoration: ShapeDecoration(
-                color: Color(0xFF414ECA),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15),
+            GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => Splash()));
+            },
+              child: Container(
+                width: 303,
+                height: 44,
+                decoration: ShapeDecoration(
+                  color: Color(0xFF414ECA),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
                 ),
-              ),
-              child: Center(
-                child: Text(
-                  'Return to Home !',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontFamily: 'Nunito',
-                    fontWeight: FontWeight.w700,
+                child: Center(
+                  child: Text(
+                    'Return to Home !',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontFamily: 'Nunito',
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                 ),
               ),

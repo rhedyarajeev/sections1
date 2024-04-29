@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:sections1/Trainings.dart';
+import 'package:sections1/practice_coming_soonn.dart';
+import 'package:sections1/pre%20_requirement_confirmation.dart';
+
+
+
 
 class PreRequirements extends StatelessWidget {
   const PreRequirements({super.key});
@@ -9,9 +15,9 @@ class PreRequirements extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: IconButton(
-          icon: Image.asset('assets/images/Arrow back (1).png'),
+          icon: Image.asset('assets/images/Arrow back.png'),
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const Training()));
           },
         ),
         title: const Text(
@@ -26,24 +32,91 @@ class PreRequirements extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 16.0),
-        child: _buildTrainingPage(),
+        child: _buildTrainingPage(context),
       ),
     );
   }
-
-  Widget _buildTrainingPage() {
+  Widget _buildTrainingPage(BuildContext context) { // Pass BuildContext here
     return SingleChildScrollView(
       child: Column(
         children: [
           _buildBigContainer(),
-          const SizedBox(height: 15),
-          _buildRemindMeContainer(),
-          const SizedBox(height: 15),
-          _buildCheckPreRequirementsContainer(),
-       
+          SizedBox(height: 20),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const Practice()));
+            },
+            child: Container(
+              width: 324,
+              height: 50,
+              padding: const EdgeInsets.symmetric(horizontal: 45, vertical: 15),
+              clipBehavior: Clip.antiAlias,
+              decoration: ShapeDecoration(
+                color: Color(0xFF8B8B8B),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
+                ),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    'Start Preparing',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontFamily: 'Nunito',
+                      fontWeight: FontWeight.w700,
+                      height: 0,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+
+          SizedBox(height: 20),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const Confirmation()));
+            },
+            child: Container(
+              width: 324,
+              height: 50,
+              padding: const EdgeInsets.symmetric(horizontal: 45, vertical: 15),
+              clipBehavior: Clip.antiAlias,
+              decoration: ShapeDecoration(
+                color: Color(0xFF077AD7),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
+                ),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    'I’m Ready for Training',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontFamily: 'Nunito',
+                      fontWeight: FontWeight.w700,
+                      height: 0,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
-    );
+      );
   }
 
   Widget _buildBigContainer() {
@@ -86,7 +159,7 @@ class PreRequirements extends StatelessWidget {
               ),
             ),
           ),
-          const Positioned(
+          Positioned(
             left: 75,
             top: 22,
             child: Column(
@@ -481,70 +554,4 @@ class PreRequirements extends StatelessWidget {
       ),
     );
   }
-
-  Widget _buildRemindMeContainer() {
-    return Container(
-      width: 324,
-      height: 50,
-      padding: const EdgeInsets.symmetric(horizontal: 45, vertical: 15),
-      clipBehavior: Clip.antiAlias,
-      decoration: ShapeDecoration(
-        color: const Color(0xFF8B8B8B),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15),
-        ),
-      ),
-      child: const Row(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(
-            'Start Preparing',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 15,
-              fontFamily: 'Nunito',
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildCheckPreRequirementsContainer() {
-    return Container(
-      width: 324,
-      height: 50,
-      padding: const EdgeInsets.symmetric(horizontal: 45, vertical: 15),
-      clipBehavior: Clip.antiAlias,
-      decoration: ShapeDecoration(
-        color: const Color(0xFF077AD7),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15),
-        ),
-      ),
-      child: const Row(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(
-            'I’m Ready for Training',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 15,
-              fontFamily: 'Nunito',
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
- 
-  }
+}
